@@ -44,12 +44,12 @@ default:
       LLMOpenAICompatible:
         enabled: True
         module: llm/openai_compatible/llm_handler_openai_compatible
-        model_name: "deepseek-v3.2"
-        enable_video_input: False # ensure your llm support video input
+        model_name: "qwen-vl-plus" # 或者 qwen-vl-max，需与百炼账号可用模型一致
+        enable_video_input: True # 开启视频输入，确保模型支持视觉
         history_length: 20
         # model_name: "gemini-2.0-flash"
         system_prompt: "请你扮演一个 AI 助手，用简短的两三句对话来回答用户的问题，并在对话内容中加入合适的标点符号，不需要讨论标点符号相关的内容"
-        api_url: "https://api.chatanywhere.tech/v1"
+        api_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
         # api_url: 'http://127.0.0.1:11434/v1' # ollama
         # api_url: 'https://generativelanguage.googleapis.com/v1beta/openai/'
         api_key: "sk-uJQzVlo6K1SOZ7EKZjnz8dUuJ4O2bRVBSPPXfFlKHENTYYaY" # default=os.getenv("DSHSCOPE_API_KEY")
